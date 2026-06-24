@@ -1,0 +1,23 @@
+name: Deploy to Azure Simulation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Build Application
+        run: echo "Compilando aplicación..."
+
+      - name: Deploy to Azure
+        run: echo "Desplegando aplicación a Azure Web App..."
+
+      - name: Deployment Success
+        run: echo "Despliegue completado correctamente"
